@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        box-sizing: border-box;
+        width: 40px;
+        height: 80px;
+        background-image: linear-gradient(#ff9800, #ff9800);
+        background-clip: padding-box;
+        background-repeat: no-repeat;
+        border: 2px solid #0000;
+        transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 0.2s linear;
+        transform-origin: center;
+        border-radius: 10px;
+        cursor: pointer;
+        list-style-type: none;
+        opacity: 0.5;
+      }
+
+      li:has(+ li + li:hover) {
+        transform: scaleY(1.1);
+      }
+
+      li:has(+ li:hover) {
+        transform: scaleY(1.2);
+      }
+
+      li:hover {
+        transform: scaleY(1.3);
+        opacity: 1;
+      }
+
+      li:hover + li {
+        transform: scaleY(1.2);
+      }
+
+      li:hover + li + li {
+        transform: scaleY(1.1);
+      }
+
+      /* Demo style */
+      body {
+        display: grid;
+        place-items: center;
+        box-sizing: border-box;
+        min-height: 100vh;
+        background-color: #f6eee3;
+        background-size: 20px 20px;
+        background-image: repeating-linear-gradient(
+          0deg,
+          #e5decf,
+          #e5decf 1px,
+          #f6eee3 1px,
+          #f6eee3
+        );
+        padding: 1rem;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

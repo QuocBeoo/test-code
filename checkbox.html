@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* @import url("https://unpkg.com/papercss@1.9.2/dist/paper.css")
+      layer(csspaper); */
+
+      label:has(+ input:checked) {
+        color: green;
+        text-decoration: line-through;
+      }
+
+      label:has(input:checked) {
+        color: green;
+        text-decoration: line-through;
+      }
+
+      /* Demo style */
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #f6eee3;
+        background-size: 20px 20px;
+        background-image: repeating-linear-gradient(
+          0deg,
+          #e5decf,
+          #e5decf 1px,
+          #f6eee3 1px,
+          #f6eee3
+        );
+      }
+
+      form div {
+        display: flex;
+        gap: 10px;
+        flex-direction: row-reverse;
+        margin-block: 1rem;
+      }
+
+      label {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paper border shadow shadow-large shadow-hover">
+      <form>
+        <div>
+          <label for="input">Target label as the previous sibling</label>
+          <input id="input" type="checkbox" />
+        </div>
+        <div>
+          <label for="input1">
+            <input id="input1" type="checkbox" />
+            Target label as the parent element
+          </label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
