@@ -11,7 +11,6 @@
       }
 
       .child {
-        transition: flex 1s;
         flex: 1;
         background: rgb(80, 49, 216);
         height: 150px;
@@ -22,12 +21,13 @@
         font-size: 3rem;
         border-right: 1px solid white;
         color: white;
+        transition: flex 1s, color 1.5s, background-color 1.5s;
       }
 
       .child:hover {
         flex: 2;
-        background: rgb(101, 203, 236);
-        color: black;
+        background: rgb(163, 2, 2);
+        color: rgb(240, 99, 99);
       }
     </style>
   </head>
