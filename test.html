@@ -2,78 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        display: flex;
-        flex-direction: column;
-      }
-      .text {
+        font-family: "Inter";
+        background: #111111;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
       }
 
-      .button {
-        background: rgb(56, 56, 126);
-        width: 150px;
-        height: 80px;
+      .container {
+        border-radius: 50px;
+        box-shadow: 12px 12px 32px #080808, -12px -12px 32px #202020;
+        width: 300px;
+        height: 40px;
+        padding: 20px;
         border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        -webkit-box-reflect: below 0px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
         transition: all 1s;
-        z-index: 1;
+      }
+      .container:hover {
+        padding: 60px 20px 60px 20px;
+        height: 380px;
+        border: 1px solid rgba(190, 27, 27, 1);
+
+        & img {
+          filter: blur(0px);
+          height: 150px;
+        }
+        & .c {
+          background: rgba(190, 27, 27, 0.5);
+          filter: blur(50px);
+        }
+        & .c1 {
+          top: -35%;
+          right: -35%;
+        }
+        & .c2 {
+          bottom: -45%;
+          left: -45%;
+        }
+
+        & .text {
+          opacity: 1;
+        }
+
+        & .cta {
+          opacity: 0;
+        }
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
       }
 
-      .button:hover {
-        background-color: rgb(109, 109, 218);
-        border-radius: 0px;
-      }
-      .button:hover .list {
-        opacity: 1;
-        top: 90px;
+      img {
+        border-radius: 8px;
+        object-fit: cover;
+        filter: blur(50px);
+        height: 40px;
+        box-shadow: 12px 12px 32px #080808;
+        transition: all 1s;
       }
 
-      .list {
+      p {
+        color: white;
+        line-height: 160%;
+        text-align: justify;
+      }
+
+      h2 {
+        color: rgba(190, 27, 27, 1);
+        padding-top: 8px;
+      }
+      .c {
+        background: rgba(190, 27, 27, 1);
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
         position: absolute;
-        left: 0;
-        top: 0px;
-        width: 330px;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.205);
+        z-index: -1;
+        transition: all 1s;
+      }
+      .c1 {
+        top: 100%;
+        right: 100%;
+      }
+
+      .c2 {
+        bottom: 100%;
+        left: 100%;
+      }
+
+      .text {
         opacity: 0;
         transition: all 1s;
-        width: 0;
-        height: 0;
-      }
-
-      .link {
-        background: white;
-        width: 300px;
-        height: 80px;
-        color: black;
-        align-content: center;
-        padding-left: 30px;
-        border-bottom: 2px solid rgb(56, 56, 126);
-        transition: all 1s;
-      }
-
-      .link:nth-last-child(1) {
-        border-bottom: none;
-      }
-      .link:hover {
-        background-color: rgb(112, 97, 162);
-        color: white;
       }
     </style>
   </head>
+
   <body>
-    <div class="text button">
-      <h1>Button</h1>
-      <div class="list">
-        <div class="link">Link 1</div>
-        <div class="link">Link 2</div>
-        <div class="link">Link 3</div>
+    <div class="container">
+      <div class="card">
+        <img src="./logo-netf.jpg" alt="" />
+        <div class="text">
+          <h2>TITLE</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nisi
+            ea possimus iste beatae explicabo veritatis, at aliquid autem
+            pariatur provident consequatur ab, ex eius adipisci alias
+            iustodoloremque dicta!
+          </p>
+        </div>
       </div>
+      <div class="c c1"></div>
+      <div class="c c2"></div>
     </div>
   </body>
 </html>
