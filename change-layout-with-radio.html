@@ -125,19 +125,6 @@
       .switcher label svg {
         display: block;
       }
-
-      .switcher input:checked + label {
-        background-color: var(--secondary);
-        color: var(--main-background);
-      }
-
-      body:has(input[value="list"]:checked) .card-list {
-        grid-template-columns: 1fr;
-      }
-
-      body:has(input[value="grid"]:checked) .card-list {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
     </style>
   </head>
   <body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #666665;
+        text-align: center;
+        align-content: center;
+        height: 90vh;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(224, 209, 209, 0.681);
+        border-radius: 34px;
+        transition: 0.4s;
+      }
+
+      .slider-toggle {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        border-radius: 50%;
+        transition: all 0.4s;
+        top: 50%;
+        left: 4px;
+        transform: translate(0%, -50%);
+      }
+
+      input:checked + .slider {
+        background-color: #21f325a7;
+      }
+
+      input:checked ~ .slider-toggle {
+        transform: translate(26px, -50%);
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider"></span>
+      <span class="slider-toggle"></span>
+    </label>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      .class-before-after {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .class-before-after a {
+        font-size: 90px;
+        cursor: pointer;
+        position: relative;
+        color: black;
+        margin: 0 60px;
+      }
+
+      .class-before-after a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: 1.5s;
+      }
+
+      .class-before-after a:hover::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .class-before-after a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-left: 2px solid black;
+        border-width: 50%;
+        border-right: 2px solid black;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: 1.5s;
+      }
+      .class-before-after a:hover::after {
+        opacity: 1;
+        transform: scale(1.2);
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="class-before-after">
+      <a href="">home</a>
+      <a href="">blog</a>
+      <a href="">contact</a>
+    </div>
+  </body>
+</html>
